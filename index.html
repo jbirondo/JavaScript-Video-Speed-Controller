@@ -24,7 +24,9 @@
     const percent = y / this.offsetHeight
     const [min, max] = [0.4, 4]
     const height = Math.round(percent * 100) + "%"
+    const playbackRate = percent * (max - min) + min
     bar.style.height = height
+    bar.textContent = playbackRate.toFixed(2) + 'x'
     console.log(min, max)
   })
   
